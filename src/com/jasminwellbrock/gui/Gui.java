@@ -1,6 +1,9 @@
 package com.jasminwellbrock.gui;
 
+import com.jasminwellbrock.actions.KeyHandler;
+
 import javax.swing.*;
+import java.awt.event.KeyListener;
 
 public class Gui {
     // Graphical User Interface
@@ -33,6 +36,10 @@ public class Gui {
         // sichtbar
         d.setVisible(true);
         // Draw Objekt dem JFrame hinzufügen
+
+        // Keyhandler einfügen
+        jf.addKeyListener(new KeyHandler());
+
         jf.add(d);
         // Fokus auf die Tastatureingabe um die Tastatur einzulesen
         jf.requestFocus();
